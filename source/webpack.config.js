@@ -66,23 +66,20 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        
-                    }, 
-                    "css-loader"],
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                ],
               },
 
 
             {
                 test: /\.less$/i,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        
-                    }, 
+                    MiniCssExtractPlugin.loader,
                     "css-loader",
                     "less-loader",
+                    "postcss-loader",
                 ]
             },
 
